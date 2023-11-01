@@ -1,0 +1,277 @@
+@import url("https://fonts.google.com/specimen/Nunito+Sans");
+@import "./variable.scss";
+@import "./responsive.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: $family;
+}
+
+.detailCountry {
+  margin-top: 3%;
+  margin-left: 5%;
+  width: 95%;
+  .header {
+    button {
+      background-color: $white;
+      background-image: url("/./back.png");
+      background-position: 5%;
+      background-repeat: no-repeat;
+      padding-left: 1%;
+      outline: none;
+      border: none;
+      box-shadow: 0 0 6px 3px $shadow;
+      width: 10%;
+      height: 56px;
+      border-radius: 5px;
+      cursor: pointer;
+      @include rs-sm {
+        width: 40%;
+        margin-top: 5%;
+      }
+    }
+  }
+  .content {
+    margin-top: 7%;
+    display: flex;
+    height: 40vh;
+    align-items: center;
+    @include rs-sm {
+      margin-top: 8%;
+      display: block;
+    }
+    .flag {
+      img {
+        width: 500px;
+        box-shadow: 0 0 6px 3px $shadow;
+        @include rs-sm {
+          width: 340px;
+        }
+      }
+    }
+    .descContainer {
+      width: 100%;
+      margin-left: 10%;
+      @include rs-sm {
+        margin-left: 0%;
+        margin-top: 10%;
+      }
+      .nameCountry {
+        color: $veryDarkBluetxt;
+        font-size: 18px;
+        margin-bottom: 2%;
+        @include rs-sm {
+          font-size: 16px;
+          margin-bottom: 10%;
+        }
+      }
+      .desc {
+        color: $darkGray;
+        display: flex;
+        @include rs-sm {
+          display: block;
+          @include rs-sm {
+            font-size: 14px;
+          }
+        }
+        span {
+          color: $veryDarkBluetxt;
+          font-weight: 600;
+        }
+        .desc1 {
+          p {
+            margin-top: 7%;
+            @include rs-sm {
+              margin-top: 3%;
+            }
+          }
+        }
+        .desc2 {
+          margin-left: 20%;
+          @include rs-sm {
+            margin-left: 0%;
+            margin-top: 15%;
+          }
+          p {
+            margin-top: 7%;
+            @include rs-sm {
+              margin-top: 3%;
+            }
+          }
+        }
+      }
+    }
+    .borderCountries {
+      display: flex;
+      align-items: center;
+      margin-top: 8%;
+      @include rs-sm {
+        margin-top: 15%;
+        display: block;
+      }
+      .cardContainer {
+        display: flex;
+        @include rs-sm {
+          display: grid;
+          grid-template-columns: auto auto auto auto;
+          width: 90%;
+          margin-top: 5%;
+          gap: 10px;
+          font-size: 12px;
+        }
+
+        .cardBorder {
+          padding: 5px 15px 5px 15px;
+          background-color: $white;
+          box-shadow: 0 0 6px 3px $shadow;
+          border-radius: 5px;
+          margin-left: 2%;
+          @include rs-sm {
+            padding: 5px 5px 5px 5px;
+          }
+        }
+      }
+    }
+  }
+}
+.darkDetailCountry {
+  margin-top: 3%;
+  margin-left: 5%;
+  width: 95%;
+  .header {
+    button {
+      background-color: $veryDarkBlue;
+      color: $white;
+      background-image: url("/./backDark.png");
+      background-position: 5%;
+      background-repeat: no-repeat;
+      padding-left: 1%;
+      outline: none;
+      border: none;
+      box-shadow: 0 0 6px 2px $shadowDark;
+      width: 10%;
+      height: 56px;
+      border-radius: 5px;
+      cursor: pointer;
+      @include rs-sm {
+        width: 40%;
+        margin-top: 5%;
+      }
+    }
+  }
+  .content {
+    margin-top: 7%;
+    display: flex;
+    height: 40vh;
+    align-items: center;
+    @include rs-sm {
+      margin-top: 8%;
+      display: block;
+    }
+    .flag {
+      img {
+        width: 500px;
+        box-shadow: 0 0 6px 2px $shadowDark;
+        @include rs-sm {
+          width: 340px;
+        }
+      }
+    }
+    .descContainer {
+      width: 100%;
+      margin-left: 10%;
+      background-color: $veryDarkBlue;
+      @include rs-sm {
+        margin-left: 0%;
+        margin-top: 10%;
+      }
+      .nameCountry {
+        color: $white;
+        font-size: 18px;
+        margin-bottom: 2%;
+        @include rs-sm {
+          font-size: 16px;
+          margin-bottom: 10%;
+        }
+      }
+      .desc {
+        color: $darklightGray;
+        display: flex;
+        @include rs-sm {
+          display: block;
+          @include rs-sm {
+            font-size: 14px;
+          }
+        }
+        span {
+          color: $white;
+          font-weight: 600;
+        }
+        .desc1 {
+          p {
+            margin-top: 7%;
+            @include rs-sm {
+              margin-top: 3%;
+            }
+          }
+        }
+        .desc2 {
+          margin-left: 20%;
+          @include rs-sm {
+            margin-left: 0%;
+            margin-top: 15%;
+          }
+          p {
+            margin-top: 7%;
+            @include rs-sm {
+              margin-top: 3%;
+            }
+          }
+        }
+      }
+    }
+    .borderCountries {
+      display: flex;
+      align-items: center;
+      margin-top: 8%;
+      color: $white;
+      background-color: $veryDarkBlue;
+      @include rs-sm {
+        margin-top: 15%;
+        display: block;
+      }
+      .cardContainer {
+        display: flex;
+        @include rs-sm {
+          display: grid;
+          grid-template-columns: auto auto auto auto;
+          width: 90%;
+          margin-top: 5%;
+          gap: 10px;
+          font-size: 12px;
+        }
+
+        .cardBorder {
+          padding: 5px 15px 5px 15px;
+          background-color: $veryDarkBlue;
+          color: $darklightGray;
+          box-shadow: 0 0 6px 2px $shadowDark;
+          border-radius: 5px;
+          margin-left: 2%;
+          @include rs-sm {
+            padding: 5px 5px 5px 5px;
+          }
+        }
+      }
+    }
+  }
+}
+.container {
+  background-color: $veryLightGray;
+  min-height: 120vh;
+}
+.darkContainer {
+  background-color: $veryDarkBlue;
+  min-height: 120vh;
+}

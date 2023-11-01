@@ -1,0 +1,400 @@
+@import url("https://fonts.google.com/specimen/Nunito+Sans");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Nunito Sans", sans-serif;
+}
+
+.country {
+  margin-left: 5%;
+  margin-top: 3%;
+  margin-right: 5%;
+}
+.country .header {
+  display: flex;
+}
+@media only screen and (max-width: 728px) {
+  .country .header {
+    display: block;
+  }
+}
+.country .header .searchContainer {
+  width: 100%;
+}
+.country .header .searchContainer input {
+  background-image: url("./search.svg");
+  background-position: 5%;
+  background-repeat: no-repeat;
+  padding-left: 4%;
+  outline: none;
+  border: none;
+  box-shadow: 0 0 6px 3px hsl(0, 0%, 90%);
+  width: 30%;
+  height: 56px;
+  border-radius: 5px;
+}
+@media only screen and (max-width: 728px) {
+  .country .header .searchContainer input {
+    width: 80%;
+    padding-left: 15%;
+  }
+}
+.country .header .filterContainer {
+  width: 15%;
+}
+@media only screen and (max-width: 728px) {
+  .country .header .filterContainer {
+    width: 50%;
+    margin-top: 5%;
+  }
+}
+.country .header .filterContainer select {
+  width: 100%;
+  height: 56px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  box-shadow: 0 0 6px 3px hsl(0, 0%, 90%);
+  padding-left: 10px;
+}
+.country .header .filterContainer select option {
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(200, 15%, 8%);
+}
+.country .favorites {
+  margin-top: 3%;
+}
+.country .favorites .removeFav {
+  margin-left: 8%;
+  padding: 5px 10px 5px 10px;
+  outline: none;
+  border: none;
+  background-color: hsl(0, 0%, 100%);
+  box-shadow: 0 0 6px 3px hsl(0, 0%, 90%);
+  border-radius: 5px;
+  cursor: pointer;
+}
+.country .favorites .favCont {
+  display: grid;
+  width: 100%;
+  grid-template-columns: auto auto auto auto;
+  margin-bottom: 5%;
+}
+@media only screen and (max-width: 728px) {
+  .country .favorites .favCont {
+    grid-template-columns: auto;
+    justify-content: center;
+  }
+}
+.country .favorites .favCont .cardFav {
+  margin-top: 8%;
+  background-color: hsl(0, 0%, 100%);
+  height: 50vh;
+  width: 280px;
+  box-shadow: 0 0 6px 3px hsl(0, 0%, 90%);
+  border-radius: 10px;
+}
+@media only screen and (max-width: 728px) {
+  .country .favorites .favCont .cardFav {
+    width: 320px;
+  }
+}
+.country .favorites .favCont .cardFav .link {
+  text-decoration: none;
+  color: hsl(200, 15%, 8%);
+}
+.country .favorites .favCont .cardFav .flag img {
+  width: 100%;
+  height: 150px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+.country .favorites .favCont .cardFav .bodyCard {
+  margin: 8% 5% 5% 8%;
+}
+.country .favorites .favCont .cardFav .bodyCard h1 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 10%;
+}
+.country .favorites .favCont .cardFav .bodyCard p {
+  margin-bottom: 3%;
+  color: hsl(0, 0%, 52%);
+}
+.country .favorites .favCont .cardFav .bodyCard p span {
+  color: hsl(200, 15%, 8%);
+  font-weight: 600;
+}
+.country .content {
+  display: grid;
+  width: 100%;
+  grid-template-columns: auto auto auto auto;
+  margin-bottom: 5%;
+}
+@media only screen and (max-width: 728px) {
+  .country .content {
+    grid-template-columns: auto;
+    justify-content: center;
+  }
+}
+.country .content .addFav {
+  margin-left: 8%;
+  padding: 5px 10px 5px 10px;
+  outline: none;
+  border: none;
+  background-color: hsl(0, 0%, 100%);
+  box-shadow: 0 0 6px 3px hsl(0, 0%, 90%);
+  border-radius: 5px;
+  cursor: pointer;
+}
+.country .content .card {
+  margin-top: 15%;
+  background-color: hsl(0, 0%, 100%);
+  height: 50vh;
+  width: 280px;
+  box-shadow: 0 0 6px 3px hsl(0, 0%, 90%);
+  border-radius: 10px;
+}
+@media only screen and (max-width: 728px) {
+  .country .content .card {
+    width: 320px;
+  }
+}
+.country .content .card .link {
+  text-decoration: none;
+  color: hsl(200, 15%, 8%);
+}
+.country .content .card .flag img {
+  width: 100%;
+  height: 150px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+.country .content .card .bodyCard {
+  margin: 8% 5% 5% 8%;
+}
+.country .content .card .bodyCard h1 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 10%;
+}
+.country .content .card .bodyCard p {
+  margin-bottom: 3%;
+  color: hsl(0, 0%, 52%);
+}
+.country .content .card .bodyCard p span {
+  color: hsl(200, 15%, 8%);
+  font-weight: 600;
+}
+
+.container {
+  background-color: hsl(0, 0%, 98%);
+  min-height: 100vh;
+}
+
+.darkContainer {
+  background-color: hsl(207, 26%, 17%);
+  height: -moz-max-content;
+  height: max-content;
+}
+
+.darkCountry {
+  background-color: hsl(207, 26%, 17%);
+  margin-left: 5%;
+  margin-top: 3%;
+  margin-right: 5%;
+}
+.darkCountry h1 {
+  color: hsl(0, 0%, 100%);
+}
+.darkCountry .header {
+  display: flex;
+}
+@media only screen and (max-width: 728px) {
+  .darkCountry .header {
+    display: block;
+  }
+}
+.darkCountry .header .searchContainer {
+  width: 100%;
+}
+.darkCountry .header .searchContainer input {
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(207, 26%, 17%);
+  background-image: url("./searchDark.svg");
+  background-position: 5%;
+  background-repeat: no-repeat;
+  padding-left: 4%;
+  outline: none;
+  border: none;
+  box-shadow: 0 0 6px 3px hsl(207, 26%, 10%);
+  width: 30%;
+  height: 56px;
+  border-radius: 5px;
+}
+@media only screen and (max-width: 728px) {
+  .darkCountry .header .searchContainer input {
+    width: 80%;
+    padding-left: 15%;
+  }
+}
+.darkCountry .header .searchContainer input::-moz-placeholder {
+  color: hsl(0, 0%, 100%);
+}
+.darkCountry .header .searchContainer input::placeholder {
+  color: hsl(0, 0%, 100%);
+}
+.darkCountry .header .filterContainer {
+  width: 15%;
+}
+@media only screen and (max-width: 728px) {
+  .darkCountry .header .filterContainer {
+    width: 50%;
+    margin-top: 5%;
+  }
+}
+.darkCountry .header .filterContainer select {
+  background-color: hsl(207, 26%, 17%);
+  color: hsl(0, 0%, 100%);
+  width: 100%;
+  height: 56px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  box-shadow: 0 0 6px 3px hsl(207, 26%, 10%);
+  padding-left: 10px;
+}
+.darkCountry .header .filterContainer select option {
+  background-color: hsl(207, 26%, 17%);
+  color: hsl(0, 0%, 100%);
+}
+.darkCountry .favorites {
+  margin-top: 3%;
+}
+.darkCountry .favorites h1 {
+  color: hsl(0, 0%, 100%);
+}
+.darkCountry .favorites .removeFav {
+  margin-left: 8%;
+  padding: 5px 10px 5px 10px;
+  outline: none;
+  border: none;
+  background-color: hsl(207, 26%, 17%);
+  color: hsl(0, 1%, 73%);
+  box-shadow: 0 0 6px 3px hsl(207, 26%, 10%);
+  border-radius: 5px;
+  cursor: pointer;
+}
+.darkCountry .favorites .favCont {
+  display: grid;
+  width: 100%;
+  grid-template-columns: auto auto auto auto;
+  margin-bottom: 5%;
+}
+@media only screen and (max-width: 728px) {
+  .darkCountry .favorites .favCont {
+    grid-template-columns: auto;
+    justify-content: center;
+  }
+}
+.darkCountry .favorites .favCont .cardFav {
+  margin-top: 8%;
+  background-color: hsl(207, 26%, 17%);
+  height: 50vh;
+  width: 280px;
+  box-shadow: 0 0 6px 3px hsl(207, 26%, 10%);
+  border-radius: 10px;
+}
+@media only screen and (max-width: 728px) {
+  .darkCountry .favorites .favCont .cardFav {
+    width: 320px;
+  }
+}
+.darkCountry .favorites .favCont .cardFav .link {
+  text-decoration: none;
+  color: hsl(0, 0%, 100%);
+}
+.darkCountry .favorites .favCont .cardFav .flag img {
+  width: 100%;
+  height: 150px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+.darkCountry .favorites .favCont .cardFav .bodyCard {
+  margin: 8% 5% 5% 8%;
+}
+.darkCountry .favorites .favCont .cardFav .bodyCard h1 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 10%;
+}
+.darkCountry .favorites .favCont .cardFav .bodyCard p {
+  margin-bottom: 3%;
+  color: hsl(0, 1%, 73%);
+}
+.darkCountry .favorites .favCont .cardFav .bodyCard p span {
+  color: hsl(0, 0%, 100%);
+  font-weight: 600;
+}
+.darkCountry .content {
+  background-color: hsl(207, 26%, 17%);
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  margin-bottom: 0%;
+}
+@media only screen and (max-width: 728px) {
+  .darkCountry .content {
+    grid-template-columns: auto;
+    justify-content: center;
+  }
+}
+.darkCountry .content .addFav {
+  margin-left: 8%;
+  padding: 5px 10px 5px 10px;
+  outline: none;
+  border: none;
+  background-color: hsl(207, 26%, 17%);
+  color: hsl(0, 1%, 73%);
+  box-shadow: 0 0 6px 3px hsl(207, 26%, 10%);
+  border-radius: 5px;
+  cursor: pointer;
+}
+.darkCountry .content .card {
+  margin-top: 15%;
+  background-color: hsl(207, 26%, 17%);
+  height: 50vh;
+  width: 280px;
+  box-shadow: 0 0 6px 3px hsl(207, 26%, 10%);
+  border-radius: 10px;
+}
+@media only screen and (max-width: 728px) {
+  .darkCountry .content .card {
+    width: 320px;
+  }
+}
+.darkCountry .content .card .link {
+  text-decoration: none;
+  color: hsl(0, 0%, 100%);
+}
+.darkCountry .content .card .flag img {
+  width: 100%;
+  height: 150px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+.darkCountry .content .card .bodyCard {
+  margin: 8% 5% 5% 8%;
+}
+.darkCountry .content .card .bodyCard h1 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 10%;
+}
+.darkCountry .content .card .bodyCard p {
+  margin-bottom: 3%;
+  color: hsl(0, 0%, 100%);
+}
+.darkCountry .content .card .bodyCard p span {
+  color: hsl(0, 0%, 100%);
+  font-weight: 600;
+}/*# sourceMappingURL=country.css.map */

@@ -1,5 +1,6 @@
 @import url("https://fonts.google.com/specimen/Nunito+Sans");
 @import "./variable.scss";
+@import "./responsive.scss";
 
 * {
   margin: 0;
@@ -11,5 +12,67 @@
   background-color: $white;
   height: 10vh;
   display: flex;
+  justify-content: space-between;
+  padding-left: 5%;
+  padding-right: 5%;
+  color: $veryDarkBluetxt;
   align-items: center;
+  box-shadow: 0 0 6px 1px $shadow;
+
+  .logo {
+    font-size: 13px;
+    font-weight: 800;
+    @include rs-sm {
+      font-size: 9px;
+    }
+  }
+
+  .darkButtonContainer {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+    background-color: $white;
+    h1 {
+      font-size: 12px;
+      font-weight: 300;
+      @include rs-sm {
+        font-size: 10px;
+      }
+    }
+  }
+}
+.darkNav {
+  background-color: $veryDarkBlue;
+  color: $white;
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 5%;
+  padding-right: 5%;
+  align-items: center;
+  box-shadow: 0 0 6px 1px $shadowDark;
+
+  .logo {
+    font-size: 13px;
+    font-weight: 800;
+    @include rs-sm {
+      font-size: 9px;
+    }
+  }
+
+  .darkButtonContainer {
+    background-color: $veryDarkBlue;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+    h1 {
+      font-size: 12px;
+      font-weight: 300;
+      @include rs-sm {
+        font-size: 10px;
+      }
+    }
+  }
 }

@@ -1,0 +1,379 @@
+@import url("https://fonts.google.com/specimen/Nunito+Sans");
+@import "./variable.scss";
+@import "./responsive.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: $family;
+}
+
+.country {
+  margin-left: 5%;
+  margin-top: 3%;
+  margin-right: 5%;
+  .header {
+    display: flex;
+    @include rs-sm {
+      display: block;
+    }
+    .searchContainer {
+      width: 100%;
+      input {
+        background-position: 5%;
+        background-repeat: no-repeat;
+        padding-left: 4%;
+        outline: none;
+        border: none;
+        box-shadow: 0 0 6px 3px $shadow;
+        width: 30%;
+        height: 56px;
+        border-radius: 5px;
+        @include rs-sm {
+          width: 80%;
+          padding-left: 15%;
+        }
+      }
+    }
+    .filterContainer {
+      width: 15%;
+      @include rs-sm {
+        width: 50%;
+        margin-top: 5%;
+      }
+      select {
+        width: 100%;
+        height: 56px;
+        border-radius: 5px;
+        border: none;
+        outline: none;
+        box-shadow: 0 0 6px 3px $shadow;
+        padding-left: 10px;
+        option {
+          background-color: $white;
+          color: $veryDarkBluetxt;
+        }
+      }
+    }
+  }
+  .favorites {
+    margin-top: 3%;
+    .removeFav {
+      margin-left: 8%;
+      padding: 5px 10px 5px 10px;
+      outline: none;
+      border: none;
+      background-color: $white;
+      box-shadow: 0 0 6px 3px $shadow;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .favCont {
+      display: grid;
+      width: 100%;
+      grid-template-columns: auto auto auto auto;
+      margin-bottom: 5%;
+      @include rs-sm {
+        grid-template-columns: auto;
+        justify-content: center;
+      }
+      .cardFav {
+        margin-top: 8%;
+        background-color: $white;
+        height: 50vh;
+        width: 280px;
+        box-shadow: 0 0 6px 3px $shadow;
+        border-radius: 10px;
+        @include rs-sm {
+          width: 320px;
+        }
+        .link {
+          text-decoration: none;
+          color: $veryDarkBluetxt;
+        }
+        .flag {
+          img {
+            width: 100%;
+            height: 150px;
+            border-top-right-radius: 10px;
+            border-top-left-radius: 10px;
+          }
+        }
+        .bodyCard {
+          margin: 8% 5% 5% 8%;
+          h1 {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 10%;
+          }
+          p {
+            margin-bottom: 3%;
+            color: $darkGray;
+            span {
+              color: $veryDarkBluetxt;
+              font-weight: 600;
+            }
+          }
+        }
+      }
+    }
+  }
+  .content {
+    display: grid;
+    width: 100%;
+    grid-template-columns: auto auto auto auto;
+    margin-bottom: 5%;
+    @include rs-sm {
+      grid-template-columns: auto;
+      justify-content: center;
+    }
+    .addFav {
+      margin-left: 8%;
+      padding: 5px 10px 5px 10px;
+      outline: none;
+      border: none;
+      background-color: $white;
+      box-shadow: 0 0 6px 3px $shadow;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .card {
+      margin-top: 15%;
+      background-color: $white;
+      height: 50vh;
+      width: 280px;
+      box-shadow: 0 0 6px 3px $shadow;
+      border-radius: 10px;
+      @include rs-sm {
+        width: 320px;
+      }
+      .link {
+        text-decoration: none;
+        color: $veryDarkBluetxt;
+      }
+      .flag {
+        img {
+          width: 100%;
+          height: 150px;
+          border-top-right-radius: 10px;
+          border-top-left-radius: 10px;
+        }
+      }
+      .bodyCard {
+        margin: 8% 5% 5% 8%;
+        h1 {
+          font-size: 18px;
+          font-weight: 700;
+          margin-bottom: 10%;
+        }
+        p {
+          margin-bottom: 3%;
+          color: $darkGray;
+          span {
+            color: $veryDarkBluetxt;
+            font-weight: 600;
+          }
+        }
+      }
+    }
+  }
+}
+.container {
+  background-color: $veryLightGray;
+  min-height: 100vh;
+}
+.darkContainer {
+  background-color: $veryDarkBlue;
+  height: max-content;
+}
+
+.darkCountry {
+  h1 {
+    color: $white;
+  }
+  background-color: $veryDarkBlue;
+  margin-left: 5%;
+  margin-top: 3%;
+  margin-right: 5%;
+  .header {
+    display: flex;
+    @include rs-sm {
+      display: block;
+    }
+    .searchContainer {
+      width: 100%;
+      input {
+        color: $white;
+        background-color: $veryDarkBlue;
+        background-image: url("./searchDark.svg");
+        background-position: 5%;
+        background-repeat: no-repeat;
+        padding-left: 4%;
+        outline: none;
+        border: none;
+        box-shadow: 0 0 6px 3px $shadowDark;
+        width: 30%;
+        height: 56px;
+        border-radius: 5px;
+        @include rs-sm {
+          width: 80%;
+          padding-left: 15%;
+        }
+      }
+      input::placeholder {
+        color: $white;
+      }
+    }
+    .filterContainer {
+      width: 15%;
+      @include rs-sm {
+        width: 50%;
+        margin-top: 5%;
+      }
+      select {
+        background-color: $veryDarkBlue;
+        color: $white;
+        width: 100%;
+        height: 56px;
+        border-radius: 5px;
+        border: none;
+        outline: none;
+        box-shadow: 0 0 6px 3px $shadowDark;
+        padding-left: 10px;
+        option {
+          background-color: $veryDarkBlue;
+          color: $white;
+        }
+      }
+    }
+  }
+  .favorites {
+    margin-top: 3%;
+    h1 {
+      color: $white;
+    }
+    .removeFav {
+      margin-left: 8%;
+      padding: 5px 10px 5px 10px;
+      outline: none;
+      border: none;
+      background-color: $veryDarkBlue;
+      color: $darklightGray;
+      box-shadow: 0 0 6px 3px $shadowDark;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .favCont {
+      display: grid;
+      width: 100%;
+      grid-template-columns: auto auto auto auto;
+      margin-bottom: 5%;
+      @include rs-sm {
+        grid-template-columns: auto;
+        justify-content: center;
+      }
+      .cardFav {
+        margin-top: 8%;
+        background-color: $veryDarkBlue;
+        height: 50vh;
+        width: 280px;
+        box-shadow: 0 0 6px 3px $shadowDark;
+        border-radius: 10px;
+        @include rs-sm {
+          width: 320px;
+        }
+        .link {
+          text-decoration: none;
+          color: $white;
+        }
+        .flag {
+          img {
+            width: 100%;
+            height: 150px;
+            border-top-right-radius: 10px;
+            border-top-left-radius: 10px;
+          }
+        }
+        .bodyCard {
+          margin: 8% 5% 5% 8%;
+          h1 {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 10%;
+          }
+          p {
+            margin-bottom: 3%;
+            color: $darklightGray;
+            span {
+              color: $white;
+              font-weight: 600;
+            }
+          }
+        }
+      }
+    }
+  }
+  .content {
+    background-color: $veryDarkBlue;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    margin-bottom: 0%;
+
+    @include rs-sm {
+      grid-template-columns: auto;
+      justify-content: center;
+    }
+
+    .addFav {
+      margin-left: 8%;
+      padding: 5px 10px 5px 10px;
+      outline: none;
+      border: none;
+      background-color: $veryDarkBlue;
+      color: $darklightGray;
+      box-shadow: 0 0 6px 3px $shadowDark;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .card {
+      margin-top: 15%;
+      background-color: $veryDarkBlue;
+      height: 50vh;
+      width: 280px;
+      box-shadow: 0 0 6px 3px $shadowDark;
+      border-radius: 10px;
+      @include rs-sm {
+        width: 320px;
+      }
+      .link {
+        text-decoration: none;
+        color: $white;
+      }
+      .flag {
+        img {
+          width: 100%;
+          height: 150px;
+          border-top-right-radius: 10px;
+          border-top-left-radius: 10px;
+        }
+      }
+      .bodyCard {
+        margin: 8% 5% 5% 8%;
+        h1 {
+          font-size: 18px;
+          font-weight: 700;
+          margin-bottom: 10%;
+        }
+        p {
+          margin-bottom: 3%;
+          color: $white;
+          span {
+            color: $white;
+            font-weight: 600;
+          }
+        }
+      }
+    }
+  }
+}

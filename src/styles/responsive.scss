@@ -1,0 +1,5 @@
+@mixin rs-sm {
+  @media only screen and (max-width: 728px) {
+    @content;
+  }
+}

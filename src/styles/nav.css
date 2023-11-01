@@ -9,5 +9,72 @@
   background-color: hsl(0, 0%, 100%);
   height: 10vh;
   display: flex;
+  justify-content: space-between;
+  padding-left: 5%;
+  padding-right: 5%;
+  color: hsl(200, 15%, 8%);
   align-items: center;
+  box-shadow: 0 0 6px 1px hsl(0, 0%, 90%);
+}
+.nav .logo {
+  font-size: 13px;
+  font-weight: 800;
+}
+@media only screen and (max-width: 728px) {
+  .nav .logo {
+    font-size: 9px;
+  }
+}
+.nav .darkButtonContainer {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+  background-color: hsl(0, 0%, 100%);
+}
+.nav .darkButtonContainer h1 {
+  font-size: 12px;
+  font-weight: 300;
+}
+@media only screen and (max-width: 728px) {
+  .nav .darkButtonContainer h1 {
+    font-size: 10px;
+  }
+}
+
+.darkNav {
+  background-color: hsl(207, 26%, 17%);
+  color: hsl(0, 0%, 100%);
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 5%;
+  padding-right: 5%;
+  align-items: center;
+  box-shadow: 0 0 6px 1px hsl(207, 26%, 10%);
+}
+.darkNav .logo {
+  font-size: 13px;
+  font-weight: 800;
+}
+@media only screen and (max-width: 728px) {
+  .darkNav .logo {
+    font-size: 9px;
+  }
+}
+.darkNav .darkButtonContainer {
+  background-color: hsl(207, 26%, 17%);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}
+.darkNav .darkButtonContainer h1 {
+  font-size: 12px;
+  font-weight: 300;
+}
+@media only screen and (max-width: 728px) {
+  .darkNav .darkButtonContainer h1 {
+    font-size: 10px;
+  }
 }/*# sourceMappingURL=nav.css.map */
